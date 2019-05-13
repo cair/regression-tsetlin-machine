@@ -8,6 +8,8 @@ This is achieved by:
 * Mapping these patterns to a continuous output through a novel voting and normalization mechanism; and 
 * Employing a feedback scheme that updates the Tsetlin Machine clauses to minimize the regression error. 
 
+as in https://arxiv.org/abs/1905.04206
+
 ## Behaviour with noisy and noise-free data
 
 Six datasets have been given in order to study the behaviour of the Regression Tsetlin Machine.
@@ -23,10 +25,12 @@ Different datasets can be called by changing the following line in **_Artificial
 ```
 df = np.loadtxt("2inNoNoise.txt").astype(dtype=np.float32)
 ```
+The training error variation for each dataset with different number of clauses can be seen in the following figure.
+
 <img src="https://github.com/cair/regression-tsetlin-machine/blob/master/Training.PNG" width="600" height="550">
 
-
-Some Results as an example:
+Datasets without noises can be perfectly learned with the less number of clauses
+Error while learning the noisy data can be reduced by increasing the number of clauses and trainig rounds
 ```
 Average Absolute Error on Training Data: 0.0
 Average Absolute Error on test data: 0.0
