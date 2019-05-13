@@ -34,4 +34,4 @@ Datasets without noise can be perfectly learned with a small number of clauses
 Average Absolute Error on Training Data: 0.0
 Average Absolute Error on test data: 0.0
 ```
-Training and testing errors for noisy data can be reduced by increasing the number of clauses and trainig rounds.
+Training and testing error for noisy data can be reduced by increasing the number of clauses and training rounds.
