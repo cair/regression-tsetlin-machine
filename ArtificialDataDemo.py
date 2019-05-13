@@ -37,4 +37,4 @@ tsetlin_machine.fit(X_train, y_train, y_train.shape[0], epochs=epochs)
 
 #test the setlin machine
 print ("Average Absolute Error on Training Data:", tsetlin_machine.evaluate(X_train, y_train, y_train.shape[0]))
-print ("Average Absolute Error on test data:", tsetlin_machine.evaluate(X_test, y_test, y_test.shape[0]))
+print ("Average Absolute Error on Test Data:", tsetlin_machine.evaluate(X_test, y_test, y_test.shape[0]))
