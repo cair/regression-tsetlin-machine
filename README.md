@@ -23,8 +23,8 @@ Different datasets can be called by changing the following line in **_Artificial
 ```
 df = np.loadtxt("2inNoNoise.txt").astype(dtype=np.float32)
 ```
+<img src="https://github.com/cair/regression-tsetlin-machine/blob/master/Training.PNG" width="250" height="250">
 
-![image](https://github.com/cair/regression-tsetlin-machine/blob/master/Training.PNG "Big boned" {width=250px height=250px})
 
 Some Results as an example:
 ```
