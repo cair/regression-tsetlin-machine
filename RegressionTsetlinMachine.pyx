@@ -5,9 +5,9 @@ from libc.stdlib cimport rand, RAND_MAX
 import pandas as pd
 from pandas import ExcelWriter
 
-#############################
+########################################
 ### The Regression Tsetlin Machine #####
-#############################
+########################################
 
 cdef class TsetlinMachine:
 	cdef int number_of_clauses
@@ -91,7 +91,7 @@ cdef class TsetlinMachine:
 		### Sum up Clause Votes ###
 		###########################
 
-        #map the total clause outputs into a continuous value using max and min values of the target series
+        # Map the total clause outputs into a continuous value using max and min values of the target series
 		output_sum = self.sum_up_clause_votes()
 		output_value = ((output_sum * (self.max_target-self.min_target))/ self.threshold) + self.min_target
 
@@ -175,7 +175,7 @@ cdef class TsetlinMachine:
 
 		output_sum = self.sum_up_clause_votes()
 
-        ##############################
+        	##############################
 		### Calculate Output Value ###
 		##############################
 
@@ -189,13 +189,13 @@ cdef class TsetlinMachine:
 		for j in xrange(self.number_of_clauses):
 			self.feedback_to_clauses[j] = 0
 
-        #type I feedback if target is higher than the predicted value
+        	# Type I feedback if target is higher than the predicted value
 		if y > output_value:
 			for j in xrange(self.number_of_clauses):
 				if 1.0*rand()/RAND_MAX < 1.0*(abs(y-output_value))/(self.max_target - self.min_target):
 					self.feedback_to_clauses[j] += 1
 					
-        #type II feedback if target is lower than the predicted value
+        	# Type II feedback if target is lower than the predicted value
 		elif y < output_value:
 			for j in xrange(self.number_of_clauses):
 				if 1.0*rand()/RAND_MAX < 1.0*(abs(y-output_value))/(self.max_target - self.min_target):
@@ -255,9 +255,9 @@ cdef class TsetlinMachine:
 							if action_include_negated == 0 and self.ta_state[j,k,1] < self.number_of_states*2:
 								self.ta_state[j,k,1] += 1
 
-	##############################################
+	#########################################################
 	### Batch Mode Training of Regression Tsetlin Machine ###
-	##############################################
+	#########################################################
 
 	def fit(self, int[:,:] X, float[:] y, int number_of_examples, int epochs=100):
 		cdef int j, l, epoch
