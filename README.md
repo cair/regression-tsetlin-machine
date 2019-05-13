@@ -29,7 +29,7 @@ The training error variation for each dataset with different number of clauses c
 
 <img src="https://github.com/cair/regression-tsetlin-machine/blob/master/Training.PNG" width="600" height="550">
 
-Datasets without noises can be perfectly learned with a small number of clauses\
+Datasets without noises can be perfectly learned with a small number of clauses
 ```
 Average Absolute Error on Training Data: 0.0
 Average Absolute Error on test data: 0.0
