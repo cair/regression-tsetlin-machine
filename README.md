@@ -32,6 +32,6 @@ The training error variation for each dataset with different number of clauses c
 Datasets without noise can be perfectly learned with a small number of clauses
 ```
 Average Absolute Error on Training Data: 0.0
-Average Absolute Error on test data: 0.0
+Average Absolute Error on Test Data: 0.0
 ```
 Training and testing error for noisy data can be reduced by increasing the number of clauses and training rounds.
